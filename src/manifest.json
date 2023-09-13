@@ -1,0 +1,47 @@
+{
+  "name": "Openify",
+  "manifest_version": 3,
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "cookies",
+    "tabs",
+    "declarativeNetRequest",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "declarative_net_request": {
+    "rule_resources": []
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://apms.shopee.io/*"],
+      "js": ["content-script.js"],
+      "all_frames": true
+    }
+  ]
+}

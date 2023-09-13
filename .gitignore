@@ -1,0 +1,43 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+**/node_modules
+
+# testing
+/coverage
+
+# production
+/lib
+/lib-cjs
+/tmp
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+.vscode/
+
+npm-debug.log*
+.pnpm-debug.log*
+**/.pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+moment-tzdata-*-import.ts
+
+generated-enum-types-original.json
+.generated-enum-types.d.ts
+.generated-enum-types-original.json
+/scripts/generate-enum-types.js
+/scripts/script-utils.js
+
+**/_config.json
+
+**/dist
+quick-notes.md
+
+**/examples
